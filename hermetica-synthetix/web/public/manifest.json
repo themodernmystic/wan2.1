@@ -1,0 +1,9 @@
+{
+  "name": "Hermetica Synthetix",
+  "short_name": "HermeticaSynthetix",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080810",
+  "theme_color": "#080810",
+  "icons": []
+}
