@@ -1,0 +1,28 @@
+{
+  "name": "hermetica-synthetix",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Merged Synthetix AI + Hermetica Forge platform, self-hosted (no Base44 dependency).",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema=./prisma/schema.prisma",
+    "prisma:deploy": "prisma migrate deploy --schema=./prisma/schema.prisma",
+    "schema:regen": "node scripts/generate-schema.js",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:web": "npm run dev --workspace=web",
+    "build:web": "npm run build --workspace=web",
+    "build:server": "npm run build --workspace=server",
+    "build": "npm run build:web && npm run build:server",
+    "start": "npm run start --workspace=server"
+  },
+  "devDependencies": {
+    "prisma": "^5.20.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0"
+  }
+}
